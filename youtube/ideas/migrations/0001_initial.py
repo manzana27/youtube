@@ -19,7 +19,11 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=255)),
                 ('description', models.TextField()),
                 ('youtube_url', models.URLField()),
-                ('status', models.CharField(choices=[('pending', 'Waiting for review'), ('accepted', 'Accepted'), ('done', 'Done'), ('rejected', 'Rejected')], default='pending', max_length=30)),
+                ('status', models.CharField(choices=[('pending', 'Waiting for review'),
+                                                     ('accepted', 'Accepted'),
+                                                     ('done', 'Done'),
+                                                     ('rejected', 'Rejected')],
+                                            default='pending', max_length=30)),
             ],
         ),
         migrations.CreateModel(
