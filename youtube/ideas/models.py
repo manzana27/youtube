@@ -12,7 +12,7 @@ class Idea(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     youtube_url = models.URLField(null=True, blank=True)
-    status = models.CharField(choices=IDEA_STATUS, max_length=30, default="pending")
+    status = models.CharField(choices=IDEA_STATUS, max_length=30, default='pending')
 
     def __str__(self):
         return self.title
